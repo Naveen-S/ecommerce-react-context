@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+:root {
+  --mainBlue: #2a2a72;
+  --lightBlue: #009ffd;
+  --mainWhite: #f3f3f3;
+  --mainDark: #232528;
+  --mainYellow: #ffa400;
+  --offWhite:  rgba(255,255,255,.5);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Ubuntu Mono', monospace !important;
+  /* font-family: 'Courier Prime', monospace !important; */
+  background: var(--mainWhite) !important;
+  color: var(--mainDark) !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-title {
+    font-family: 'Courier Prime', monospace;
+    text-transform: uppercase;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text-blue {
+  color: var(--mainBlue);
 }
 
-.App-link {
-  color: #61dafb;
+.text-bright {
+  color: var(--lightBlue);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-bright:hover {
+  color: var(--lightBlue);
+  opacity: 0.8;
+}
+
+.border-bright {
+  border: 1px solid var(--lightBlue);
+}
+
+.border-yellow {
+  border: 1px solid var(--mainYellow);
+}
+
+.text-yellow {
+  color: var(--mainYellow);
+}
+
+.text-yellow:hover {
+  color: var(--mainYellow);
+  opacity: .8;
+}
+
+  .text-white {
+  color: var(--offWhite);
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.btn-style {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  background: transparent; 
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-style:hover {
+  text-decoration: none;
 }

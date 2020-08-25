@@ -1,0 +1,23 @@
+.details-container {
+    display: flex;
+}
+
+img-phone {
+    width: 60%;
+}
+
+.price {
+    color: #2a2a72;
+    font-size: 1.4rem;
+}
+.company {
+    text-transform: uppercase;
+}
+
+.info {
+    font-size: 1.1rem;
+}
+
+.info-heading {
+    font-size: 1.2rem;
+}
