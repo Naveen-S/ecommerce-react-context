@@ -1,16 +1,14 @@
 import React, { useContext } from 'react'
+import ClassNames from 'classnames';
 import Product from './Product';
 import Title from './Title';
 import { ProductContext } from '../context';
 
 
 export default function ProductList () {
-    const {products} = useContext(ProductContext);
-    console.log('products using context:', products);
-
+    const {products, modalOpen} = useContext(ProductContext);
     const renderProducts = () => {
 
-        console.log(products);
         if(!products) {
             return;
         }
@@ -20,9 +18,9 @@ export default function ProductList () {
     }
 
     return (
-        <div className="container">
+        <div className={ClassNames("container", {blur: modalOpen})}>
             <Title name={"Our Products"} />
-            <div className="row">
+            <div className="row d-flex justify-content-center">
                 {renderProducts()}
             </div>
         </div>

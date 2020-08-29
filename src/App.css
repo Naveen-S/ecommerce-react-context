@@ -60,15 +60,23 @@ body {
 
 .btn-style {
   text-transform: capitalize;
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
   background: transparent; 
   border-radius: 5px;
-  padding: 5px;
-  margin: 5px;
+  /* padding: 5px; */
+  /* margin: 5px; */
   cursor: pointer;
   text-decoration: none;
 }
 
 .btn-style:hover {
   text-decoration: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.font-20 {
+  font-size: 20px;
 }

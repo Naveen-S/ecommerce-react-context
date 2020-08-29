@@ -1,9 +1,10 @@
-.details-container {
+.inner-container {
     display: flex;
+    justify-content: center;
 }
 
-img-phone {
-    width: 60%;
+.img-phone {
+    width: 100%;
 }
 
 .price {
@@ -13,11 +14,12 @@ img-phone {
 .company {
     text-transform: uppercase;
 }
-
+/* 
 .info {
     font-size: 1.1rem;
 }
 
 .info-heading {
     font-size: 1.2rem;
-}
+} */
+
