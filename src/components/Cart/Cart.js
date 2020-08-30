@@ -1,14 +1,18 @@
 import React, { useContext } from 'react';
+import {useHistory} from 'react-router-dom';
 import Title from '../Title';
 import { ProductContext } from '../../context';
 import CardItem from './CartItem';
 import CartHeader from './CartHeader';
+import Payment from '../Payment';
 import './Cart.css';
 
 export default function Cart() {
+    const history = useHistory();
     const {cart, subTotal, tax, total, increment, decrement, removeItem, clearCart} = useContext(ProductContext);
     
     const renderCartItems = () => {
+        console.log(history);
         if(cart.length > 0) {
             let allItems =  cart.map((item) => {
                 return <CardItem key={item.id} product={item} methods={{increment, decrement, removeItem}}/>
@@ -24,8 +28,8 @@ export default function Cart() {
                             <h4 className="text-nowrap"> <span className="w-60 d-inline-block">Subtotal:</span> ${subTotal}</h4>
                             <h4 className="text-nowrap"> <span className="w-60 d-inline-block">Tax:</span> ${tax}</h4>
                             <h4 className="text-nowrap"> <span className="w-60 d-inline-block">Total:</span> ${total}</h4>
-
                         </div>
+                        <Payment total={total} clearCart={clearCart} history={history}/>
                     </div>
                 </div>)
         } else {

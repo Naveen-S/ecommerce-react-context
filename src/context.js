@@ -166,7 +166,7 @@ class ProductProvider extends Component {
                 removeItem: this.removeItem,
                 clearCart: this.clearCart
             }}>
-                {this.props.children};
+                {this.props.children}
             </ProductContext.Provider>
         )
     }
